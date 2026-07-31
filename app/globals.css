@@ -1535,9 +1535,9 @@ summary {
   background:
     linear-gradient(
       180deg,
-      rgba(247, 245, 240, 0.9),
-      rgba(247, 245, 240, 0.87) 45%,
-      rgba(233, 240, 243, 0.92)
+      rgba(247, 245, 240, 0.62),
+      rgba(247, 245, 240, 0.5) 45%,
+      rgba(233, 240, 243, 0.66)
     );
   inset: 0;
   position: absolute;
@@ -1553,7 +1553,35 @@ summary {
 }
 
 .living-page .glass.tint {
-  background: rgba(233, 240, 243, 0.5);
+  background: transparent;
+}
+
+/* frosted panel behind each block of copy so it reads over the video */
+.living-page .glass > * {
+  position: relative;
+  z-index: 1;
+}
+
+.living-page .glass::before {
+  backdrop-filter: blur(14px) saturate(115%);
+  -webkit-backdrop-filter: blur(14px) saturate(115%);
+  background: rgba(250, 249, 246, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 26px;
+  bottom: 34px;
+  box-shadow: 0 22px 60px -34px rgba(29, 44, 63, 0.4);
+  content: "";
+  left: 50%;
+  max-width: 820px;
+  position: absolute;
+  top: 34px;
+  transform: translateX(-50%);
+  width: calc(100% - 60px);
+  z-index: 0;
+}
+
+.living-page .page-hero.glass::before {
+  top: 150px;
 }
 
 .living-page .glass::after {
@@ -2555,6 +2583,17 @@ footer {
 
   .doorway-copy {
     padding: 40px 18px 48px;
+  }
+
+  .living-page .glass::before {
+    border-radius: 20px;
+    bottom: 22px;
+    top: 22px;
+    width: calc(100% - 24px);
+  }
+
+  .living-page .page-hero.glass::before {
+    top: 108px;
   }
 
   .schedule-strip > img,
