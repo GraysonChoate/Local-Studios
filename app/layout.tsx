@@ -1,11 +1,26 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Manrope, Fraunces, Caveat } from "next/font/google";
 import { headers } from "next/headers";
 import "./globals.css";
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  weight: ["400", "500"],
+  display: "swap",
+});
+
+const caveat = Caveat({
+  variable: "--font-script",
+  subsets: ["latin"],
+  weight: ["400", "600"],
   display: "swap",
 });
 
@@ -31,14 +46,14 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: "Local Studios | Movement Meets Community",
       description,
-      images: [{ url: `${origin}/og.png`, width: 1680, height: 941 }],
+      images: [{ url: `${origin}/og.jpg`, width: 1600, height: 900 }],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: "Local Studios | Movement Meets Community",
       description,
-      images: [`${origin}/og.png`],
+      images: [`${origin}/og.jpg`],
     },
   };
 }
@@ -50,7 +65,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={manrope.variable}>{children}</body>
+      <body
+        className={`${manrope.variable} ${fraunces.variable} ${caveat.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

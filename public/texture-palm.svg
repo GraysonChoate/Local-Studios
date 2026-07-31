@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800" fill="none">
+  <defs>
+    <filter id="soft" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="14" />
+    </filter>
+  </defs>
+  <g filter="url(#soft)" fill="#1d2c3f">
+    <g transform="translate(60 20)">
+      <path d="M40 10 C 190 70, 300 190, 372 330 C 330 214, 250 108, 140 34 Z" />
+      <path d="M40 10 C 168 44, 250 118, 300 214 C 250 132, 172 66, 60 26 Z" transform="rotate(-16 40 10)" />
+      <path d="M40 10 C 156 60, 232 148, 274 254 C 232 166, 164 88, 56 30 Z" transform="rotate(14 40 10)" />
+      <path d="M40 10 C 130 82, 186 182, 210 300 C 190 200, 140 106, 52 34 Z" transform="rotate(34 40 10)" />
+      <path d="M40 10 C 96 96, 122 208, 122 330 C 116 216, 88 108, 42 30 Z" transform="rotate(52 40 10)" />
+    </g>
+    <g transform="translate(880 240) scale(-0.72 0.72)">
+      <path d="M40 10 C 190 70, 300 190, 372 330 C 330 214, 250 108, 140 34 Z" />
+      <path d="M40 10 C 168 44, 250 118, 300 214 C 250 132, 172 66, 60 26 Z" transform="rotate(-20 40 10)" />
+      <path d="M40 10 C 156 60, 232 148, 274 254 C 232 166, 164 88, 56 30 Z" transform="rotate(16 40 10)" />
+      <path d="M40 10 C 130 82, 186 182, 210 300 C 190 200, 140 106, 52 34 Z" transform="rotate(40 40 10)" />
+    </g>
+  </g>
+</svg>

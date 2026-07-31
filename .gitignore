@@ -40,3 +40,7 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# large source masters (kept locally, not in git)
+/visual-assets/
+/references/
