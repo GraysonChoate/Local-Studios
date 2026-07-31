@@ -10,7 +10,7 @@
   --coral: #f0a8a8;
   --on-coral: #1d2c3f;
   --blush: #e8a9a0;
-  --clay: #b5695e;
+  --clay: #9c5347;
 }
 
 .doodle {
@@ -40,11 +40,6 @@
   width: 84px;
 }
 
-.doodle-hero-r {
-  bottom: 16%;
-  right: 5%;
-  width: 74px;
-}
 
 .doodle-next-l {
   left: 6%;
@@ -400,15 +395,6 @@ summary {
   border-color: var(--midnight);
 }
 
-.texture {
-  background-image: url("/local-coastal-pattern.webp");
-  background-position: center;
-  background-size: 760px auto;
-  inset: 0;
-  opacity: 0.2;
-  pointer-events: none;
-  position: absolute;
-}
 
 .mat::after {
   background-repeat: repeat;
@@ -438,11 +424,6 @@ summary {
   opacity: 0.16;
 }
 
-.mat-driftwood::after {
-  background-image: url("/mat-driftwood.webp");
-  background-size: 820px;
-  opacity: 0.05;
-}
 
 .palm-shadow::before {
   background-image: url("/texture-palm.svg");
@@ -520,10 +501,6 @@ summary {
   font-size: 20px;
   font-style: italic;
   margin: 30px 0;
-}
-
-.texture {
-  transform: translate3d(0, calc(var(--scroll-y, 0) * -0.03px), 0);
 }
 
 .portal-grid {
@@ -676,7 +653,7 @@ summary {
 }
 
 .page-section .eyebrow {
-  color: rgba(23, 36, 53, 0.6);
+  color: rgba(23, 36, 53, 0.72);
 }
 
 .page-section .eyebrow {
@@ -829,7 +806,7 @@ summary {
 
 .step-card.step-clay {
   --step-accent: var(--clay);
-  --step-glow: rgba(181, 105, 94, 0.45);
+  --step-glow: rgba(156, 83, 71, 0.45);
   --step-tint: rgba(247, 240, 237, 0.7);
 }
 
@@ -988,7 +965,7 @@ summary {
 }
 
 .quote-card figcaption {
-  color: rgba(23, 36, 53, 0.55);
+  color: rgba(23, 36, 53, 0.72);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -1135,7 +1112,7 @@ summary {
 }
 
 .rate-detail {
-  color: rgba(23, 36, 53, 0.6);
+  color: rgba(23, 36, 53, 0.72);
   font-size: 14px;
   margin: 10px 0 0;
 }
@@ -1240,136 +1217,23 @@ summary {
   margin: 34px auto;
 }
 
-.swatch-row {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 22px;
-}
 
-.swatch-chip {
-  border: 1px solid rgba(29, 44, 63, 0.15);
-  border-radius: 14px;
-  display: block;
-  height: 56px;
-  width: 90px;
-}
 
-.tex-meta code {
-  font-size: 15px;
-  opacity: 0.55;
-}
 
-.tex-page {
-  margin: 0 auto;
-  max-width: 1100px;
-  padding: 60px 30px 120px;
-}
 
-.tex-head h1 {
-  font-size: 40px;
-  font-weight: 500;
-  margin: 0;
-}
 
-.tex-head p {
-  color: rgba(23, 36, 53, 0.7);
-  font-size: 15px;
-  line-height: 1.7;
-  margin: 14px 0 0;
-  max-width: 62ch;
-}
 
-.tex-block {
-  border-top: 1px solid rgba(29, 44, 63, 0.14);
-  margin-top: 56px;
-  padding-top: 32px;
-}
 
-.tex-meta h2 {
-  font-family: var(--font-serif), Georgia, serif;
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 400;
-  margin: 0;
-}
 
-.tex-meta p {
-  color: rgba(23, 36, 53, 0.66);
-  font-size: 14px;
-  margin: 8px 0 0;
-}
 
-.tex-swatches {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 24px;
-}
 
-.tex-swatch {
-  border: 1px solid rgba(29, 44, 63, 0.1);
-  border-radius: 14px;
-  height: 190px;
-  overflow: hidden;
-  position: relative;
-}
 
-.tex-fill {
-  background-repeat: repeat;
-  inset: 0;
-  position: absolute;
-}
 
-.tex-swatch span {
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 999px;
-  bottom: 10px;
-  font-size: 10px;
-  font-weight: 800;
-  left: 10px;
-  padding: 4px 9px;
-  position: absolute;
-}
 
-.tex-incontext {
-  align-items: center;
-  border-radius: 18px;
-  display: flex;
-  justify-content: center;
-  margin-top: 18px;
-  min-height: 230px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-}
 
-.tex-incontext-copy {
-  position: relative;
-  z-index: 1;
-}
 
-.tex-eyebrow {
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  margin: 0;
-  text-transform: uppercase;
-}
 
-.tex-incontext h3 {
-  font-size: 34px;
-  font-weight: 500;
-  margin: 12px 0 0;
-}
 
-.tex-incontext-copy p:last-child {
-  font-family: var(--font-serif), Georgia, serif;
-  font-size: 17px;
-  font-style: italic;
-  margin: 10px 0 0;
-}
 
 @media (max-width: 700px) {
   .tex-swatches {
@@ -1798,67 +1662,12 @@ summary {
   text-shadow: 0 2px 24px rgba(29, 44, 63, 0.5);
 }
 
-.motion-band {
-  align-items: flex-end;
-  display: flex;
-  justify-content: center;
-  min-height: 620px;
-  overflow: hidden;
-  padding: 90px 30px 80px;
-  position: relative;
-}
 
-.motion-band video {
-  height: 100%;
-  inset: 0;
-  object-fit: cover;
-  object-position: center 42%;
-  position: absolute;
-  width: 100%;
-}
 
-.motion-wash {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(247, 245, 240, 0.26) 0%,
-      rgba(247, 245, 240, 0.08) 35%,
-      rgba(29, 44, 63, 0.46) 100%
-    );
-  inset: 0;
-  position: absolute;
-}
 
-.motion-copy {
-  color: var(--white);
-  max-width: 720px;
-  position: relative;
-  text-align: center;
-  z-index: 1;
-}
 
-.motion-copy h2 {
-  font-size: clamp(1.9rem, 1.4rem + 2vw, 3rem);
-  font-weight: 500;
-  line-height: 1.06;
-  margin: 16px 0 0;
-  text-shadow: 0 2px 24px rgba(29, 44, 63, 0.4);
-}
 
-.motion-copy h2 span {
-  display: block;
-  font-family: var(--font-serif), Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-}
 
-.motion-copy > p:not(.eyebrow) {
-  font-family: var(--font-serif), Georgia, serif;
-  font-size: 18px;
-  font-style: italic;
-  margin: 18px 0 0;
-  text-shadow: 0 2px 20px rgba(29, 44, 63, 0.45);
-}
 
 .doorway-band {
   align-items: center;
@@ -2152,7 +1961,7 @@ summary {
 }
 
 .events-foot {
-  color: rgba(23, 36, 53, 0.58);
+  color: rgba(23, 36, 53, 0.72);
   font-size: 14px;
   margin: 34px auto 0;
   max-width: 1120px;
@@ -2330,7 +2139,7 @@ summary {
   text-align: center;
 }
 
-.final-cta > *:not(.texture):not(.final-cta-media):not(.final-cta-wash) {
+.final-cta > *:not(.final-cta-media):not(.final-cta-wash) {
   position: relative;
   z-index: 1;
 }
@@ -2413,7 +2222,7 @@ footer {
 }
 
 .footer-brand p.footer-note {
-  color: rgba(23, 36, 53, 0.5);
+  color: rgba(23, 36, 53, 0.72);
   font-family: var(--font-manrope), Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -2437,7 +2246,7 @@ footer {
 }
 
 .footer-links p {
-  color: rgba(23, 36, 53, 0.55);
+  color: rgba(23, 36, 53, 0.75);
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -2844,10 +2653,6 @@ footer {
     background-image: url("/local-hero-loop-poster.jpg");
     background-position: center center;
     background-size: cover;
-  }
-
-  .texture {
-    transform: none;
   }
 
   .tension-line {

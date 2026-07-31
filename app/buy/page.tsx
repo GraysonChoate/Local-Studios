@@ -20,7 +20,7 @@ const perks = [
   {
     label: "Membership",
     title: "A guest pass, every month",
-    body: "Plus ten percent off retail and an early booking window on the schedule.",
+    body: "Book ahead of general release, and bring someone with you once a month.",
     accent: "clay",
   },
   {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ScrollFx from "../scroll-fx";
-import { Arrow, Footer, Header } from "../site-chrome";
+import { Arrow, Footer, Header, externalProps, liveSite } from "../site-chrome";
 
 export const metadata: Metadata = {
   title: "FAQ | Local Studios",
@@ -164,11 +164,11 @@ export default function Faq() {
             data-reveal
             style={{ "--reveal-delay": "120ms" } as React.CSSProperties}
           >
-            <a className="button button-dark" href="/schedule">
-              View the schedule <Arrow />
+            <a className="button button-dark" href={`${liveSite}/contact`} {...externalProps(liveSite)}>
+              Ask us anything <Arrow />
             </a>
-            <a className="text-link" href="/first-timers">
-              New to Lagree <Arrow />
+            <a className="text-link" href="/schedule">
+              See class times <Arrow />
             </a>
           </div>
         </div>

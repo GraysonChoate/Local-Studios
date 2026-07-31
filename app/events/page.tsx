@@ -58,6 +58,7 @@ export default function Events() {
           playsInline
           preload="none"
           poster="/local-toast-poster.webp"
+          aria-hidden="true"
         >
           <source src="/local-toast.mp4" type="video/mp4" />
         </video>
@@ -113,8 +114,12 @@ export default function Events() {
               Birthdays, bachelorettes, team outings — eight machines,
               fifty minutes, just your people.
             </p>
-            <a className="button button-dark" href="/buy">
-              Book a private class <Arrow />
+            <a
+              className="button button-dark"
+              href={`${liveSite}/contact`}
+              {...externalProps(liveSite)}
+            >
+              Enquire about a private <Arrow />
             </a>
           </div>
 

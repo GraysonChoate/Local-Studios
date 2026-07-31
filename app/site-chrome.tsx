@@ -104,6 +104,7 @@ export function Footer({ referral }: { referral?: boolean }) {
           playsInline
           preload="none"
           poster="/local-beach-friendship-poster.webp"
+          aria-hidden="true"
         >
           <source src="/local-beach-friendship.mp4" type="video/mp4" />
         </video>

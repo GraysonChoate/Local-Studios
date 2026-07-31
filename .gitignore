@@ -44,3 +44,6 @@ next-env.d.ts
 # large source masters (kept locally, not in git)
 /visual-assets/
 /references/
+
+# build artifacts
+tsconfig.tsbuildinfo
