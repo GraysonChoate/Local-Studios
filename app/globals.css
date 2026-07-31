@@ -624,23 +624,27 @@ summary {
 .page-hero {
   background:
     linear-gradient(150deg, rgba(247, 245, 240, 0.95), rgba(192, 213, 227, 0.55) 60%, rgba(233, 240, 243, 0.9) 100%);
-  padding: 190px 30px 90px;
+  padding: 170px 30px 72px;
   text-align: center;
 }
 
 .page-hero h1 {
-  font-size: clamp(2.1rem, 1.5rem + 2.6vw, 3.75rem);
+  font-size: clamp(1.9rem, 1.3rem + 1.9vw, 2.9rem);
   font-weight: 500;
-  line-height: 1.05;
-  margin: 22px auto 0;
-  max-width: 820px;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin: 20px auto 0;
+  max-width: 18ch;
+  text-wrap: balance;
 }
 
 .page-hero h1 span {
   display: block;
   font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.12em;
   font-style: italic;
   font-weight: 400;
+  margin-top: 0.32em;
 }
 
 .page-hero .lead {
@@ -802,18 +806,70 @@ summary {
 }
 
 .step-card {
+  --step-accent: var(--sky);
+  --step-glow: rgba(192, 213, 227, 0.85);
+  --step-tint: rgba(233, 240, 243, 0.55);
   background: var(--white);
   border: 1px solid rgba(29, 44, 63, 0.09);
   border-radius: 20px;
+  overflow: hidden;
   padding: 34px 30px 36px;
+  position: relative;
   transition:
     transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 320ms ease;
+}
+
+.step-card.step-coral {
+  --step-accent: var(--coral);
+  --step-glow: rgba(240, 168, 168, 0.8);
+  --step-tint: rgba(250, 238, 238, 0.6);
+}
+
+.step-card.step-clay {
+  --step-accent: var(--clay);
+  --step-glow: rgba(181, 105, 94, 0.45);
+  --step-tint: rgba(247, 240, 237, 0.7);
+}
+
+.step-card::before {
+  background:
+    linear-gradient(180deg, var(--step-tint), transparent 70%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.step-card::after {
+  background: var(--step-accent);
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.step-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.step-card .eyebrow {
+  color: var(--step-accent);
+}
+
+.step-card.step-coral .eyebrow,
+.step-card.step-clay .eyebrow {
+  filter: brightness(0.78);
 }
 
 .step-card:hover {
-  box-shadow: 0 18px 40px -18px rgba(29, 44, 63, 0.24);
-  transform: translateY(-5px);
+  border-color: var(--step-accent);
+  box-shadow: 0 20px 44px -20px var(--step-glow);
+  transform: translateY(-6px);
 }
 
 .step-card h3 {
@@ -883,6 +939,33 @@ summary {
 .quote-card:hover {
   box-shadow: 0 18px 40px -18px rgba(29, 44, 63, 0.22);
   transform: translateY(-4px);
+}
+
+/* rotate a soft tint through the testimonial cards */
+.quote-card:nth-child(4n + 1) {
+  background: rgba(233, 240, 243, 0.86);
+}
+
+.quote-card:nth-child(4n + 2) {
+  background: rgba(250, 240, 240, 0.8);
+}
+
+.quote-card:nth-child(4n + 3) {
+  background: rgba(248, 245, 240, 0.9);
+}
+
+.quote-card:nth-child(4n + 4) {
+  background: rgba(240, 245, 248, 0.86);
+}
+
+.quote-card blockquote::before {
+  color: var(--coral);
+  content: "\201C";
+  display: block;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 44px;
+  line-height: 0.6;
+  margin-bottom: 10px;
 }
 
 .rate-card {
@@ -1572,7 +1655,7 @@ summary {
   box-shadow: 0 22px 60px -34px rgba(29, 44, 63, 0.4);
   content: "";
   left: 50%;
-  max-width: 820px;
+  max-width: 900px;
   position: absolute;
   top: 34px;
   transform: translateX(-50%);
@@ -1582,6 +1665,31 @@ summary {
 
 .living-page .page-hero.glass::before {
   top: 150px;
+}
+
+/* each panel picks up a different brand tint down the page */
+.living-page section.glass:nth-of-type(1)::before {
+  background: rgba(250, 249, 246, 0.68);
+}
+
+.living-page section.glass:nth-of-type(2)::before {
+  background: rgba(233, 240, 243, 0.7);
+  border-color: rgba(192, 213, 227, 0.6);
+}
+
+.living-page section.glass:nth-of-type(3)::before {
+  background: rgba(250, 244, 242, 0.72);
+  border-color: rgba(240, 168, 168, 0.42);
+}
+
+.living-page section.glass:nth-of-type(4)::before {
+  background: rgba(247, 244, 240, 0.72);
+  border-color: rgba(181, 105, 94, 0.32);
+}
+
+.living-page section.glass:nth-of-type(5)::before {
+  background: rgba(240, 245, 248, 0.74);
+  border-color: rgba(192, 213, 227, 0.7);
 }
 
 .living-page .glass::after {
@@ -1614,6 +1722,11 @@ summary {
 
 .site-header-light {
   color: var(--white);
+  text-shadow: 0 1px 12px rgba(29, 44, 63, 0.55);
+}
+
+.site-header-light .brand img {
+  filter: drop-shadow(0 1px 10px rgba(29, 44, 63, 0.6));
 }
 
 .site-header-light .mobile-menu summary span {
@@ -1644,9 +1757,10 @@ summary {
   background:
     linear-gradient(
       180deg,
-      rgba(29, 44, 63, 0.42) 0%,
-      rgba(29, 44, 63, 0.3) 40%,
-      rgba(29, 44, 63, 0.6) 100%
+      rgba(29, 44, 63, 0.62) 0%,
+      rgba(29, 44, 63, 0.42) 18%,
+      rgba(29, 44, 63, 0.34) 45%,
+      rgba(29, 44, 63, 0.62) 100%
     );
   inset: 0;
   position: absolute;

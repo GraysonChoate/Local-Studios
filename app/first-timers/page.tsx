@@ -11,16 +11,19 @@ export const metadata: Metadata = {
 const steps = [
   {
     label: "Before",
+    accent: "sky",
     title: "Arrive fifteen minutes early",
     body: "Enough time to meet the front desk, get set up, and walk through the Megaformer before anyone touches a spring.",
   },
   {
     label: "Bring",
+    accent: "coral",
     title: "Grip socks and water",
     body: "Grip socks are required and sold in studio if you forget. Workout clothes you can move slowly in.",
   },
   {
     label: "During",
+    accent: "clay",
     title: "Fifty minutes, coached throughout",
     body: "Slow, controlled work with modifications offered the whole way. You set the pace; the shake shows up on its own.",
   },
@@ -97,7 +100,7 @@ export default function FirstTimers() {
         <div className="step-grid">
           {steps.map((step, i) => (
             <article
-              className="step-card"
+              className={`step-card step-${step.accent}`}
               key={step.title}
               data-reveal
               style={{ "--reveal-delay": `${i * 90}ms` } as React.CSSProperties}
